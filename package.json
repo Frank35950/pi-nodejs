@@ -1,4 +1,24 @@
 {
+  "compilerOptions": {
+    "target": "ES2020",                // Modern JS output
+    "module": "ESNext",                // Use ES modules
+    "moduleResolution": "Node",        // Resolve like Node.js
+    "outDir": "dist",                  // Compiled output folder
+    "rootDir": "src",                  // Source folder
+    "strict": true,                    // Enable all strict type checks
+    "esModuleInterop": true,           // Allow default imports from CommonJS
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,              // Skip type checking of dependencies
+    "resolveJsonModule": true,         // Import JSON files
+    "incremental": true,               // Faster builds with cache
+    "baseUrl": "./src",                // Base path for imports
+    "paths": {
+      "@/*": ["*"]                     // Path alias: import from "@/utils"
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}{
   "name": "pi-backend",
   "version": "0.1.3",
   "type": "module",
